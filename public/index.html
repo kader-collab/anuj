@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anuj Tiles</title>
+  
+  <!-- Link to AOS Library for Scroll Animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  
+  <!-- Swiper CSS (for the slider) -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* Header Section */
+    header {
+      background: linear-gradient(45deg, hsl(0, 100%, 47%), hsl(323, 100%, 50%));
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 60px;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    header nav {
+      margin-top: 20px;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      margin: 0 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+
+    header nav a:hover {
+      color: rgb(28, 0, 17);
+    }
+
+    /* Swiper Styles */
+    .swiper-container {
+      width: 100%;
+      height: 400px;
+      margin-top: 50px;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Hero Section */
+    section.hero {
+      padding: 60px 20px;
+      text-align: center;
+      color: #333;
+      background: #fff;
+      position: relative;
+      z-index: 20;
+    }
+
+    section.hero h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    section.hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    section.hero button {
+      padding: 15px 30px;
+      background-color: hsl(0, 100%, 47%);
+      color: white;
+      border: none;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border-radius: 5px;
+    }
+
+    section.hero button:hover {
+      background-color: hsl(0, 100%, 50%);
+    }
+
+    /* Parallax Effect Section */
+    .parallax {
+      background-image: url('images/tiles-background.jpg');
+      height: 500px;
+      background-position: center;
+      background-attachment: fixed;
+      background-size: cover;
+      filter: brightness(70%);
+    }
+
+    /* Cards Section */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 60px 20px;
+      background-color: #f9f9f9;
+    }
+
+    .card {
+      background-color: white;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 20px;
+      font-size: 24px;
+    }
+
+    .card p {
+      margin: 0 20px 20px;
+      color: #777;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    /* Footer Section */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: hsl(0, 100%, 47%);
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+      display: inline-block;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+/* Card Styles */
+.cards .card {
+  transition: transform 0.1s ease, box-shadow 0.1s ease; /* Very fast transition */
+  transform-style: preserve-3d; /* Ensures 3D transformations work */
+}
+
+/* Elevation on hover */
+.cards .card:hover {
+  transform: translateY(-10px) scale(1.05); /* Moves the card up and slightly enlarges */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow for the elevation effect */
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Welcome to Anuj Tiles</h1>
+    <nav>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Swiper Slider Section -->
+  <div class="swiper-container" data-aos="fade-up">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="images/logo.jpg" alt="Tile 1">
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" data-aos="fade-up">
+    <h2>Redefining Your Spaces</h2>
+    <p>Discover the perfect tiles that elevate the beauty of your spaces, from modern to classical designs.</p>
+    <button onclick="location.href='contactus.html'">Contact Us</button>
+  </section>
+
+  <!-- Cards Section -->
+  <section class="cards">
+    <div class="card" data-aos="fade-right" onclick="location.href='floor-tiles.html'">
+      <img src="images/floor.jpg" alt="Tile 1">
+      <h3>Floor Tiles</h3>
+      <p>Durable floor tiles that provide both beauty and practicality for high-traffic areas.</p>
+    </div>
+    <div class="card" data-aos="fade-up" onclick="location.href='wall-tiles.html'">
+      <img src="images/wall.jpg" alt="Tile 2">
+      <h3>Wall Tiles</h3>
+      <p>Elegant wall tiles with a polished marble finish, perfect for modern bathrooms and kitchens.</p>
+    </div>
+    <div class="card" data-aos="fade-left" onclick="location.href='kitchen-tiles.html'">
+      <img src="images/kitchen.jpg" alt="Tile 3">
+      <h3>Kitchen Tiles</h3>
+      <p>Water-resistant tiles with wood-like textures, bringing warmth and sophistication to your kitchen.</p>
+    </div>
+    <div class="card" data-aos="fade-right" onclick="location.href='pooja-tiles.html'">
+      <img src="images/pooja.jpg" alt="Tile 4">
+      <h3>Pooja Tiles</h3>
+      <p>Textured tiles that enhance spiritual spaces with intricate designs and a serene atmosphere.</p>
+    </div>
+    <div class="card" data-aos="fade-up" onclick="location.href='bathroom-tiles.html'">
+      <img src="images/bathroom.jpg" alt="Tile 5">
+      <h3>Bathroom Tiles</h3>
+      <p>Vibrant mosaic tiles that create a stunning visual appeal for your bathroom walls and floors.</p>
+    </div>
+    <div class="card" data-aos="fade-left" onclick="location.href='step-tiles.html'">
+      <img src="images/step.jpg" alt="Tile 6">
+      <h3>Step Tiles</h3>
+      <p>Industrial-style tiles designed for steps and staircases, adding a bold look to modern homes.</p>
+    </div>
+    <div class="card" data-aos="fade-right" onclick="location.href='parking-tiles.html'">
+      <img src="images/parking.jpg" alt="Tile 7">
+      <h3>Parking Tiles</h3>
+      <p>Heavy-duty tiles made for outdoor use, with high durability and weather resistance for parking areas.</p>
+    </div>
+    <div class="card" data-aos="fade-up" onclick="location.href='elevation-tiles.html'">
+      <img src="images/elevation.jpg" alt="Tile 8">
+      <h3>Elevation Tiles</h3>
+      <p>Rough-textured tiles perfect for outdoor spaces, adding natural beauty and long-lasting strength.</p>
+    </div>
+    <div class="card" data-aos="fade-left" onclick="location.href='pillar-tiles.html'">
+      <img src="images/pillar.jpg" alt="Tile 8">
+      <h3>Pillar Tiles</h3>
+      <p>Rough-textured tiles perfect for outdoor spaces, adding natural beauty and long-lasting strength.</p>
+    </div>
+    <div class="card" data-aos="fade-right" onclick="location.href='3d-tiles.html'">
+      <img src="images/3d.jpg" alt="Tile 8">
+      <h3>3D Tiles</h3>
+      <p>Rough-textured tiles perfect for outdoor spaces, adding natural beauty and long-lasting strength.</p>
+    </div>
+    <div class="card" data-aos="fade-up" onclick="location.href='sanitary-ware.html'">
+      <img src="images/sanitary.jpg" alt="Tile 8">
+      <h3>Sanitary Ware</h3>
+      <p>Rough-textured tiles perfect for outdoor spaces, adding natural beauty and long-lasting strength.</p>
+    </div>
+    <div class="card" data-aos="fade-left" onclick="location.href='tapfitting.html'">
+      <img src="images/tapfitting.jpg" alt="Tile 8">
+      <h3>Tap Fitting</h3>
+      <p>Rough-textured tiles perfect for outdoor spaces, adding natural beauty and long-lasting strength.</p>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 Anuj Tiles. All rights reserved.</p>
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
+  <!-- Initialize AOS -->
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true
+    });
+  </script>
+  
+  <!-- Initialize Swiper -->
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>
