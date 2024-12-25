@@ -187,16 +187,22 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow for the elevation effect */
 }
 
-.swiper-container {
-  width: 100%;
-  height: auto; /* Allow the slider to adjust height */
-}
-
 .swiper-slide img {
   width: 100%;
-  height: auto;
-  object-fit: cover; /* Scale the image without stretching */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Adjust to 'contain' if you want no cropping at all */
 }
+
+.swiper-container {
+  width: 100%;
+  height: auto; /* Adjusts the height dynamically */
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 
 
   </style>
