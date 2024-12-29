@@ -69,8 +69,8 @@
   
     .swiper-slide img {
       width: 100%;
-      max-height: 400px; /* Ensures the image doesn't get too large */
-      object-fit: contain; /* Prevents cropping */
+      height: auto; /* Ensures the image doesn't get too large */
+      object-fit: cover; /* Prevents cropping */
     }
   
     /* Responsive Adjustments for Mobile */
@@ -78,6 +78,7 @@
       .swiper-slide img {
         max-height: 250px; /* Adjust image height for smaller screens */
         object-fit: contain; /* Prevent cropping */
+        display: block;
       }
     }
   
